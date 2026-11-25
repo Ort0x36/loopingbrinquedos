@@ -4,125 +4,377 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Looping Brinquedos | Locação de brinquedos para festas em Praia Grande/SP</title>
-<meta name="description" content="Locação de brinquedos para festas infantis em Praia Grande/SP: pula-pula, cama elástica, piscina de bolinhas e mais. Peça seu orçamento pelo WhatsApp.">
+<meta name="description" content="Locação de pula-pula, cama elástica, piscina de bolinhas e outros brinquedos para festas em Praia Grande/SP. Escolha pelo site e receba o orçamento no WhatsApp.">
 <meta property="og:title" content="Looping Brinquedos | Brinquedos para festas em Praia Grande/SP">
-<meta property="og:description" content="Escolha os brinquedos, informe a data e receba seu orçamento pelo WhatsApp.">
+<meta property="og:description" content="Escolha os brinquedos, informe a data e receba o orçamento pelo WhatsApp.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta name="theme-color" content="#2F6FCB">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='8 22 84 56'%3E%3Ccircle cx='36' cy='50' r='28' fill='%232F6FCB'/%3E%3Ccircle cx='64' cy='50' r='28' fill='%23F28BB0'/%3E%3Cpath d='M50 25.75A28 28 0 0 1 50 74.25A28 28 0 0 1 50 25.75Z' fill='%231B2A4A'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Looping Brinquedos","description":"Locação de brinquedos para festas","areaServed":"Praia Grande, SP","sameAs":["https://www.instagram.com/loopingbrinquedos"]}</script>
+<script>document.documentElement.classList.add("js")</script>
 <style>
-:root{--blue:#2F6FCB;--pink:#F28BB0;--pinkt:#C2477F;--sun:#FFC83D;--navy:#1B2A4A;--green:#1B7F46;
---bg:#FFF8EE;--sky:#EAF3FF;--ink:#1B2A4A;--muted:#4A5876;--card:#fff;--line:#E6EDF7;--chipb:#EAF3FF;--chipbt:#1B4F9C;--chipp:#FCE4EE;--chippt:#8A2F57;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1B3D;--sky:#14244A;--ink:#FFF8EE;--muted:#B9C6E0;--card:#1B2A4A;--line:#2A3C66;--chipb:#243a6b;--chipbt:#BFD8FF;--chipp:#4a2a44;--chippt:#FFC4DB;--pinkt:#F8A8C6}}
-:root[data-theme="dark"]{--bg:#0F1B3D;--sky:#14244A;--ink:#FFF8EE;--muted:#B9C6E0;--card:#1B2A4A;--line:#2A3C66;--chipb:#243a6b;--chipbt:#BFD8FF;--chipp:#4a2a44;--chippt:#FFC4DB;--pinkt:#F8A8C6}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:calc(84px + env(safe-area-inset-top,0px))}
-body{background:var(--bg);color:var(--ink);font:400 17px/1.6 Nunito,system-ui,sans-serif}
-h1,h2,h3,.f{font-family:Fredoka,Nunito,sans-serif;font-weight:600;line-height:1.1}
-h1{font-size:clamp(2.3rem,6vw,4rem)}h2{font-size:clamp(1.8rem,4vw,2.7rem);margin-bottom:12px}h3{font-size:1.3rem}
+/* ---------- Tokens da marca ---------- */
+:root{color-scheme:light;
+ --blue:#2F6FCB;--blue-d:#2459A6;--pink:#F28BB0;--pinkt:#C2477F;--sun:#FFC83D;--navy:#1B2A4A;--green:#1B7F46;--green-d:#156638;
+ --bg:#FFF8EE;--sky:#EAF3FF;--ink:#1B2A4A;--muted:#4A5876;--card:#fff;--line:#E3E9F2;
+ --accent:#2F6FCB;--tint-b:#E1EDFF;--tint-p:#FDE6EF;--tint-y:#FFF0C7;
+ --chipb:#EAF3FF;--chipbt:#1B4F9C;--chipp:#FCE4EE;--chippt:#8A2F57;--err:#B3261E;
+ --shadow:0 1px 2px rgba(27,42,74,.06),0 10px 28px -16px rgba(27,42,74,.22);
+ --shadow-h:0 2px 6px rgba(27,42,74,.07),0 26px 44px -20px rgba(27,42,74,.34);
+ --ease:cubic-bezier(.22,.61,.36,1);--spring:cubic-bezier(.34,1.42,.5,1);
+ --r-lg:28px;--r-md:20px;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
+ --bg:#0F1B3D;--sky:#15254A;--ink:#FFF8EE;--muted:#B9C6E0;--card:#1A2A52;--line:#2A3C66;
+ --accent:#9CC2FF;--tint-b:#1D3463;--tint-p:#3A2549;--tint-y:#3A3322;
+ --chipb:#243A6B;--chipbt:#BFD8FF;--chipp:#4A2A44;--chippt:#FFC4DB;--pinkt:#F8A8C6;--err:#FF8A80;
+ --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 30px -16px rgba(0,0,0,.6);
+ --shadow-h:0 2px 6px rgba(0,0,0,.3),0 26px 44px -18px rgba(0,0,0,.75)}}
+:root[data-theme="dark"]{color-scheme:dark;
+ --bg:#0F1B3D;--sky:#15254A;--ink:#FFF8EE;--muted:#B9C6E0;--card:#1A2A52;--line:#2A3C66;
+ --accent:#9CC2FF;--tint-b:#1D3463;--tint-p:#3A2549;--tint-y:#3A3322;
+ --chipb:#243A6B;--chipbt:#BFD8FF;--chipp:#4A2A44;--chippt:#FFC4DB;--pinkt:#F8A8C6;--err:#FF8A80;
+ --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 30px -16px rgba(0,0,0,.6);
+ --shadow-h:0 2px 6px rgba(0,0,0,.3),0 26px 44px -18px rgba(0,0,0,.75)}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box;margin:0}
+html{overflow-x:clip;scroll-behavior:smooth;scroll-padding-top:calc(88px + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 Nunito,system-ui,sans-serif;overflow-x:clip;padding-bottom:env(safe-area-inset-bottom,0px)}
+h1,h2,h3,.f{font-family:Fredoka,Nunito,sans-serif;font-weight:600;line-height:1.08;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.35rem,5.4vw,4.1rem)}
+h2{font-size:clamp(1.8rem,3.3vw,2.55rem);margin-bottom:14px}
+h3{font-size:1.18rem;line-height:1.25}
+p{text-wrap:pretty}
 a{color:inherit}img,svg{max-width:100%}
-:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
-.w{width:min(1160px,100% - 40px);margin:auto}
-section{padding:80px 0}
-.sky{background:var(--sky)}
-.lead{color:var(--muted);max-width:60ch;margin-bottom:36px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;font:700 1rem Nunito;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s,box-shadow .15s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(27,42,74,.18)}
-.b1{background:var(--blue);color:#fff}.b2{background:transparent;border-color:var(--blue);color:var(--blue)}.bg{background:var(--green);color:#fff}
-@media(prefers-color-scheme:dark){.b2{color:#BFD8FF;border-color:#BFD8FF}}
-/* header */
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
-.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{font-size:2rem;color:var(--blue);text-decoration:none;display:flex;align-items:center;line-height:1}
-.logo svg{height:.56em;width:.84em;margin:0 .03em;vertical-align:-.02em}
-.menu{display:flex;gap:26px;align-items:center}
-.menu a{text-decoration:none;font-weight:700}.menu a:not(.btn):hover{color:var(--blue)}
-.menu .btn{min-height:44px;padding:0 20px;color:#fff}
-.burger{display:none;width:48px;height:48px;border:0;background:var(--sky);border-radius:14px;cursor:pointer;color:var(--ink)}
-@media(max-width:860px){.burger{display:block}.menu{position:absolute;left:0;right:0;top:72px;background:var(--bg);flex-direction:column;align-items:stretch;padding:16px 20px 24px;gap:4px;border-bottom:1px solid var(--line);display:none}.menu.open{display:flex}.menu a:not(.btn){padding:12px 4px}}
-/* hero */
-.hero{padding:56px 0 80px;overflow:hidden;background:radial-gradient(circle,rgba(47,111,203,.12) 2px,transparent 2.5px) 0 0/26px 26px}
-.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.hero p.lead{font-size:1.15rem;margin:18px 0 28px}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+.w{width:min(1160px,100% - 40px);margin-inline:auto}
+section{padding:clamp(72px,9vw,112px) 0;position:relative}
+.lead{color:var(--muted);max-width:56ch;font-size:1.06rem}
+.head{margin-bottom:clamp(32px,4vw,48px)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Bandejas: seções com fundo céu e cantos arredondados, como peças encaixadas na página */
+.tray{background:var(--sky);border-radius:clamp(28px,4vw,52px);margin-inline:clamp(8px,1.5vw,22px)}
+
+/* ---------- Botões ---------- */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font:700 1rem/1 Nunito,sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;
+ transition:transform .25s var(--ease),box-shadow .25s var(--ease),background-color .2s,color .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px -10px rgba(27,42,74,.45)}
+.btn:active{transform:translateY(0) scale(.98);box-shadow:none;transition-duration:.08s}
+.btn:focus-visible{border-radius:999px}
+.b1{background:var(--blue);color:#fff}.b1:hover{background:var(--blue-d)}
+.bg{background:var(--green);color:#fff}.bg:hover{background:var(--green-d)}
+.b2{background:transparent;border-color:currentColor;color:var(--accent)}.b2:hover{background:var(--chipb)}
+.bw{background:#fff;color:var(--green)}.bw:hover{background:#F3FBF6}
+.btn .ar{transition:transform .25s var(--ease)}.btn:hover .ar{transform:translateX(3px)}
+
+/* ---------- Peças Looping (linguagem gráfica) ---------- */
+.kb{--pf:#2F6FCB;--pd:#1F56A8}.kp{--pf:#F28BB0;--pd:#D7678F}.ky{--pf:#FFC83D;--pd:#E0A21C}.kn{--pf:#1B2A4A;--pd:#0C1730}.kc{--pf:#FFF8EE;--pd:#E6D8C0}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .kn{--pf:#BFD8FF;--pd:#8DAEE3}}
+:root[data-theme="dark"] .kn{--pf:#BFD8FF;--pd:#8DAEE3}
+.pc{position:absolute;display:block;height:auto;pointer-events:none;transform:rotate(var(--r,0deg));
+ animation:drift var(--t,10s) ease-in-out var(--dl,0s) infinite alternate}
+@keyframes drift{from{transform:translate3d(0,0,0) rotate(var(--r,0deg))}to{transform:translate3d(var(--dx,0px),var(--dy,-12px),0) rotate(calc(var(--r,0deg) + var(--dr,5deg)))}}
+.idle .pc{animation-play-state:paused}
+/* peças que chegam e se encaixam quando o grupo entra na tela */
+html.js .fit .pc{translate:var(--fx,0px) var(--fy,-70px);opacity:0;transition:translate .9s var(--spring) var(--fd,0s),opacity .4s var(--ease) var(--fd,0s)}
+html.js .fit.in .pc{translate:0 0;opacity:1}
+
+/* ---------- Revelação ao rolar ---------- */
+html.js [data-rv]{opacity:0;translate:0 22px;transition:opacity .7s var(--ease),translate .7s var(--ease),scale .7s var(--ease),clip-path .9s var(--ease);transition-delay:calc(var(--i,0) * 80ms)}
+html.js [data-rv="fade"]{translate:none}
+html.js [data-rv="scale"]{translate:none;scale:.96}
+html.js [data-rv="clip"]{translate:none;opacity:1;clip-path:inset(14% 10% 14% 10% round 24px)}
+html.js [data-rv].in{opacity:1;translate:0 0;scale:1;clip-path:inset(0 0 0 0 round 0)}
+
+/* ---------- Cabeçalho ---------- */
+header{position:sticky;top:0;z-index:20;background:var(--bg);padding-top:env(safe-area-inset-top,0px);transition:box-shadow .3s,background-color .3s}
+header.sc{box-shadow:0 1px 0 var(--line),0 10px 24px -20px rgba(27,42,74,.5)}
+@supports (backdrop-filter:blur(8px)){header.sc{background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(1.4) blur(12px)}}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:inline-grid;justify-items:start;text-decoration:none;color:var(--blue);line-height:1}
+.logo .wm{display:flex;align-items:center;font-size:1.95rem}
+.logo .wm svg{height:.6em;width:.9em;margin:0 .02em;transition:transform .5s var(--spring)}
+.logo:hover .wm svg{transform:rotate(-12deg)}
+.logo .sub{font:700 .53rem/1 Nunito,sans-serif;letter-spacing:.34em;color:var(--pinkt);margin:3px 0 0 .15em}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) header .logo{color:#7DB4FF}}
+:root[data-theme="dark"] header .logo{color:#7DB4FF}
+.menu{display:flex;gap:28px;align-items:center}
+.menu a{text-decoration:none;font-weight:700}
+.menu a:not(.btn){position:relative;padding:6px 0}
+.menu a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;border-radius:3px;background:var(--pink);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.menu a:not(.btn):hover::after,.menu a[aria-current="true"]::after{transform:scaleX(1)}
+.menu .btn{min-height:44px;padding:0 20px}
+.burger{display:none;width:48px;height:48px;border:0;background:var(--sky);border-radius:16px;cursor:pointer;color:var(--ink);padding:0}
+.burger span{display:block;width:20px;height:2.5px;border-radius:2px;background:currentColor;margin:4px auto;transition:transform .3s var(--ease),opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+@media(max-width:880px){
+ .burger{display:block}
+ .menu{position:absolute;left:8px;right:8px;top:calc(100% + 4px);background:var(--card);flex-direction:column;align-items:stretch;padding:12px 18px 18px;gap:2px;border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow-h);display:none}
+ .menu.open{display:flex;animation:menuIn .28s var(--ease)}
+ .menu a:not(.btn){padding:13px 4px;border-bottom:1px solid var(--line)}
+ .menu a:not(.btn)::after{display:none}
+ .menu .btn{margin-top:12px;min-height:50px}
+}
+@keyframes menuIn{from{opacity:0;transform:translateY(-8px)}}
+
+/* ---------- Hero ---------- */
+.hero{padding:clamp(40px,6vw,72px) 0 clamp(72px,9vw,112px);overflow-x:clip}
+.hg{display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(32px,5vw,64px);align-items:center}
+.tag{display:inline-flex;align-items:center;gap:8px;background:var(--chipp);color:var(--chippt);font-weight:700;font-size:.88rem;padding:7px 14px;border-radius:999px;margin-bottom:22px}
+.tag svg{width:18px;height:12px}
+.hero h1 em{font-style:normal;color:var(--accent);position:relative;white-space:nowrap;z-index:0}
+.hero h1 em::after{content:"";position:absolute;left:-.06em;right:-.06em;bottom:.04em;height:.3em;border-radius:99px;background:var(--sun);opacity:.55;z-index:-1;transform-origin:left;animation:mark .7s var(--ease) .9s both}
+@keyframes mark{from{transform:scaleX(0)}}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero h1 em::after{height:.12em;bottom:0;opacity:.9}}
+:root[data-theme="dark"] .hero h1 em::after{height:.12em;bottom:0;opacity:.9}
+.hero .lead{font-size:1.14rem;margin:22px 0 32px}
 .ctas{display:flex;gap:12px;flex-wrap:wrap}
-.tag{display:inline-block;background:var(--chipp);color:var(--chippt);font-weight:700;font-size:.9rem;padding:6px 14px;border-radius:999px;margin-bottom:18px}
-.art{position:relative;aspect-ratio:1.15;max-width:520px;margin:auto;width:100%}
-.art .c1,.art .c2{position:absolute;width:62%;aspect-ratio:1;border-radius:50%;top:14%;animation:bounce 1.8s cubic-bezier(.3,1.6,.5,1) 1}
-.c1{left:0;background:var(--blue)}.c2{right:0;background:var(--pink);mix-blend-mode:multiply;animation-delay:.12s!important}
-@keyframes bounce{0%{transform:translateY(-60px) scale(.9);opacity:0}60%{opacity:1}100%{transform:none}}
-.art svg{position:absolute;inset:6% 4% 0;z-index:2;filter:drop-shadow(0 14px 18px rgba(27,42,74,.25))}
-.note{font-size:.8rem;color:var(--muted);text-align:center;margin-top:8px}
-@media(max-width:860px){.hg{grid-template-columns:1fr}.art{order:-1;max-width:340px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-/* differentials */
-.grid{display:grid;gap:20px}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
-@media(max-width:900px){.g3,.g4{grid-template-columns:1fr 1fr}}@media(max-width:560px){.g3,.g4{grid-template-columns:1fr}}
-.box{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:24px}
-.ico{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:1.6rem;margin-bottom:14px;background:var(--chipb)}
-.pend{display:inline-block;margin-top:10px;font-size:.8rem;font-weight:700;background:var(--sun);color:var(--navy);padding:3px 10px;border-radius:999px}
-/* catalog */
-.chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
-.chip{min-height:44px;padding:0 20px;border-radius:999px;border:2px solid var(--line);background:var(--card);color:var(--ink);font:700 .95rem Nunito;cursor:pointer}
-.chip[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:#fff}
-.card{background:var(--card);border:2px solid var(--line);border-radius:20px;padding:16px;display:flex;flex-direction:column;transition:transform .2s}
-.card:hover{transform:translateY(-4px)}
-.ph{height:170px;border-radius:14px;background:var(--sky);display:grid;place-items:center;position:relative;overflow:hidden}
-.ph svg{height:88%}.ph small{position:absolute;bottom:6px;right:10px;font-size:.7rem;color:var(--muted)}
-.card h3{margin:14px 0 4px}.card p{font-size:.95rem;color:var(--muted)}
-.cp{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;font-size:.85rem;font-weight:700}
-.cp span{padding:4px 10px;border-radius:999px;background:var(--chipb);color:var(--chipbt)}.cp span:first-child{background:var(--chipp);color:var(--chippt)}
-.card .btn{margin-top:auto;width:100%}.price{margin-bottom:10px;font-size:.95rem}
-/* steps */
-.step{text-align:center}.step .n{width:64px;height:64px;margin:0 auto 14px;position:relative}
-.step .n b{position:absolute;inset:0;display:grid;place-items:center;font:600 1.5rem Fredoka;color:#fff;z-index:2}
-.step .n i{position:absolute;width:44px;height:44px;border-radius:50%;background:var(--blue);left:0;top:10px}
-.step .n u{position:absolute;width:44px;height:44px;border-radius:50%;background:var(--pink);right:0;top:10px;mix-blend-mode:multiply}
-/* gallery */
-.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:160px;gap:14px}
-.gal div{border-radius:20px;display:grid;place-items:center;text-align:center;padding:12px;font-weight:700;font-size:.9rem;color:#fff}
-.gal .big{grid-column:span 2;grid-row:span 2}
-@media(max-width:700px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:130px}}
-/* faq */
-details{background:var(--card);border:2px solid var(--line);border-radius:16px;margin-bottom:12px}
-summary{cursor:pointer;padding:18px 22px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px;min-height:56px;align-items:center}
-summary::after{content:"+";font:600 1.6rem Fredoka;color:var(--blue);transition:transform .2s}
-details[open] summary::after{transform:rotate(45deg)}details p{padding:0 22px 20px;color:var(--muted)}
-/* form */
-.fw{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
-@media(max-width:860px){.fw{grid-template-columns:1fr}}
-form{background:var(--card);border:2px solid var(--line);border-radius:24px;padding:28px;display:grid;gap:16px}
-label{font-weight:700;font-size:.95rem;display:grid;gap:6px}
-input,select,textarea{font:inherit;min-height:48px;padding:10px 14px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
-.r2{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:560px){.r2{grid-template-columns:1fr}}
-.sel{display:flex;flex-wrap:wrap;gap:8px}.sel label{display:flex;grid-template:none;align-items:center;gap:8px;border:2px solid var(--line);border-radius:999px;padding:8px 14px;font-weight:400;cursor:pointer;min-height:44px}
-.sel input{width:18px;min-height:0;height:18px}.sel label:has(input:checked){background:var(--chipb);border-color:var(--blue)}
-.err{color:#B3261E;font-size:.85rem;min-height:1em}
+.seq{animation:rise .8s var(--ease) both;animation-delay:var(--sd,0s)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}}
+
+.stage{position:relative;width:100%;max-width:540px;aspect-ratio:1/.98;margin-inline:auto}
+.stage .mark{position:absolute;left:3%;right:3%;top:8%;width:94%;overflow:visible}
+.stage .mark .l{animation:meetL 1.8s cubic-bezier(.3,1.35,.5,1) .15s both}
+.stage .mark .r{animation:meetR 1.8s cubic-bezier(.3,1.35,.5,1) .15s both}
+.stage .mark .lens{animation:lens .5s var(--ease) 1s both}
+@keyframes meetL{0%{transform:translate(-18px,-10px);opacity:0}25%{opacity:1}55%{transform:translate(2px,0)}75%{transform:translate(-1px,-2px)}100%{transform:none}}
+@keyframes meetR{0%{transform:translate(18px,-10px);opacity:0}25%{opacity:1}55%{transform:translate(-2px,0)}75%{transform:translate(1px,-2px)}100%{transform:none}}
+@keyframes lens{from{opacity:0}}
+.stage .toy{position:absolute;left:11%;right:11%;bottom:9%;animation:toyIn 1s var(--spring) .75s both}
+.stage .toy svg{display:block;width:100%;height:auto;filter:drop-shadow(0 18px 18px rgba(27,42,74,.2));animation:breathe 7s ease-in-out 2s infinite alternate}
+@keyframes toyIn{from{opacity:0;transform:translateY(30px) scale(.94)}}
+@keyframes breathe{to{transform:translateY(-6px)}}
+.stage .pc{animation:drift var(--t,10s) ease-in-out var(--dl,0s) infinite alternate,arrive .9s var(--spring) var(--fd,1s) both}
+@keyframes arrive{from{translate:var(--fx,0px) var(--fy,-60px);opacity:0}to{translate:0 0;opacity:1}}
+.note{font-size:.8rem;color:var(--muted);text-align:center;margin-top:10px}
+@media(max-width:880px){.hg{grid-template-columns:1fr}.stage{max-width:400px}.hero .lead{margin:18px 0 28px}}
+
+/* ---------- Cuidados ---------- */
+.care{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,6vw,88px);align-items:start}
+.care-l{position:sticky;top:120px}
+.tower{position:relative;width:240px;height:236px;margin-top:40px}
+.list{list-style:none;padding:0;display:grid}
+.list li{display:grid;grid-template-columns:52px 1fr auto;gap:4px 18px;align-items:start;padding:22px 0;border-bottom:1px solid var(--line)}
+.list li:first-child{padding-top:0}
+.list .mk{grid-row:span 2;width:44px;height:44px;display:grid;place-items:center;transition:transform .45s var(--spring)}
+.list .mk svg{width:40px;height:auto}
+.list li:hover .mk{transform:translateY(-3px) rotate(-8deg)}
+.list h3{align-self:end}
+.list p{grid-column:2;color:var(--muted);font-size:.98rem}
+.pend{display:inline-block;font:700 .74rem/1 Nunito,sans-serif;letter-spacing:.02em;background:var(--sun);color:var(--navy);padding:6px 10px;border-radius:999px;white-space:nowrap}
+.list .pend{grid-column:3;grid-row:1;align-self:center}
+.ok{background:var(--chipb);color:var(--chipbt)}
+@media(max-width:880px){.care{grid-template-columns:1fr}.care-l{position:static}.tower{display:none}}
+@media(max-width:520px){.list li{grid-template-columns:44px 1fr}.list .pend{grid-column:2;grid-row:auto;justify-self:start;margin-top:8px}}
+
+/* ---------- Catálogo ---------- */
+.cat-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{min-height:44px;padding:0 18px;border-radius:999px;border:2px solid var(--line);background:var(--card);color:var(--ink);font:700 .93rem Nunito,sans-serif;cursor:pointer;transition:background-color .2s,border-color .2s,color .2s,transform .2s var(--ease)}
+.chip:hover{border-color:var(--blue)}
+.chip:active{transform:scale(.96)}
+.chip[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip[aria-pressed=true]{background:#FFF8EE;border-color:#FFF8EE;color:#1B2A4A}}
+:root[data-theme="dark"] .chip[aria-pressed=true]{background:#FFF8EE;border-color:#FFF8EE;color:#1B2A4A}
+.grid{display:grid;gap:clamp(16px,2vw,24px)}
+.g3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:980px){.g3{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.g3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:10px;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow-h)}
+.card.enter{animation:cardIn .5s var(--ease) both;animation-delay:calc(var(--i,0) * 60ms)}
+@keyframes cardIn{from{opacity:0;translate:0 14px}}
+.ph{aspect-ratio:16/11;border-radius:20px;display:grid;place-items:center;position:relative;overflow:hidden;background:var(--tint-b)}
+.ph.t-p{background:var(--tint-p)}.ph.t-y{background:var(--tint-y)}
+.ph svg{width:84%;height:auto;transition:transform .6s var(--ease)}
+.card:hover .ph svg{transform:scale(1.04)}
+.ph .hop{transition:transform .5s var(--spring)}
+.card:hover .ph .hop{transform:translateY(-8px)}
+.ph .ill{position:absolute;top:12px;left:12px;font-size:.72rem;font-weight:700;color:var(--muted);background:var(--card);padding:4px 9px;border-radius:999px;opacity:.9}
+.cb{padding:18px 12px 12px;display:flex;flex-direction:column;flex:1}
+.cb .ct{font-size:.8rem;font-weight:700;color:var(--pinkt);letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px}
+.cb h3{font-size:1.3rem}
+.cb .ds{color:var(--muted);font-size:.96rem;margin:6px 0 16px}
+.specs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:16px}
+.specs div{background:var(--bg);border-radius:14px;padding:9px 10px}
+.specs dt{font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.specs dd{margin:0;font-weight:700;font-size:.92rem}
+.tbd{color:var(--muted);font-weight:400!important;font-style:italic}
+.price{display:flex;align-items:baseline;justify-content:space-between;margin:auto 2px 14px;font-size:.92rem;color:var(--muted)}
+.price b{font:600 1.15rem Fredoka,sans-serif;color:var(--ink)}
+.price b.tbd{font:italic 400 .95rem Nunito,sans-serif}
+.card .btn{width:100%}
+.card .btn .ck{display:none;width:18px;height:18px}
+.card .btn.on{background:var(--chipb);color:var(--chipbt)}
+.card .btn.on .ck{display:block}
+
+/* ---------- Como funciona ---------- */
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.steps::before{content:"";position:absolute;left:12%;right:12%;top:34px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--blue),var(--pink) 50%,var(--sun));transform:scaleX(0);transform-origin:left;transition:transform 1.4s var(--ease) .2s;opacity:.55}
+.steps.in::before{transform:scaleX(1)}
+html:not(.js) .steps::before{transform:none}
+.step{text-align:center;position:relative}
+.step .n{position:relative;width:72px;height:72px;margin:0 auto 18px;display:grid;place-items:center}
+.step .n svg{position:absolute;inset:0;width:72px;height:auto}
+.step .n b{position:relative;font:600 1.6rem Fredoka,sans-serif;color:#fff;margin-top:-4px}
+.step .n.dk b{color:var(--navy)}
+html.js .steps .n{scale:.4;opacity:0;transition:scale .7s var(--spring),opacity .3s;transition-delay:calc(var(--i) * 160ms + .1s)}
+html.js .steps.in .n{scale:1;opacity:1}
+.step h3{margin-bottom:6px}.step p{color:var(--muted);font-size:.97rem;max-width:26ch;margin-inline:auto}
+@media(max-width:880px){
+ .steps{grid-template-columns:1fr;gap:28px}
+ .steps::before{left:34px;right:auto;top:20px;bottom:20px;width:4px;height:auto;transform:scaleY(0);transform-origin:top}
+ .steps.in::before{transform:scaleY(1)}
+ .step{text-align:left;display:grid;grid-template-columns:72px 1fr;gap:0 18px;align-items:center}
+ .step .n{margin:0;grid-row:span 2}.step h3{align-self:end;margin:0}.step p{margin:0;max-width:none;align-self:start}
+}
+
+/* ---------- Galeria ---------- */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:clamp(130px,15vw,190px);gap:clamp(10px,1.4vw,16px)}
+.gal figure{position:relative;border-radius:var(--r-md);overflow:hidden;display:flex;align-items:flex-end;padding:16px;font-weight:700;font-size:.88rem;color:var(--navy)}
+.gal figure svg{position:absolute;width:46%;height:auto;right:-6%;bottom:-8%;opacity:.4;transition:transform 1.2s var(--ease)}
+.gal .big svg{width:34%}.gal .tall svg{width:70%}
+.gal figure:hover svg{transform:rotate(10deg) translateY(6px)}
+.gal figcaption{position:relative;background:rgba(255,248,238,.88);padding:5px 11px;border-radius:999px}
+.gal .big{grid-column:span 2;grid-row:span 2;border-radius:var(--r-lg)}
+.gal .tall{grid-row:span 2}
+.gal .t-b{background:#CFE1FB}.gal .t-p{background:#FAD3E2}.gal .t-y{background:#FFE7A6}.gal .t-n{background:#1B2A4A;color:#fff}
+.gal .t-n figcaption{background:rgba(255,255,255,.14);color:#fff}
+@media(max-width:720px){.gal{grid-template-columns:1fr 1fr}.gal .tall{grid-row:span 1}.gal .t-n{grid-column:span 2}}
+
+/* ---------- Sobre ---------- */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,80px);align-items:center}
+.portrait{position:relative;aspect-ratio:4/5;max-width:400px;width:100%;border-radius:999px 999px var(--r-lg) var(--r-lg);background:var(--tint-p);display:grid;place-items:center;overflow:hidden;color:var(--muted);font-weight:700;font-size:.9rem}
+.portrait svg{position:absolute;bottom:-6%;left:50%;width:86%;transform:translateX(-50%);opacity:.5}
+.portrait span{position:relative;background:var(--card);padding:6px 12px;border-radius:999px}
+.vals{display:grid;gap:14px;margin-top:28px}
+.vals div{background:var(--card);border-radius:var(--r-md);padding:20px 22px;border:1px solid var(--line)}
+.vals h3{margin-bottom:4px}
+.ph-t{color:var(--muted);font-style:italic}
+@media(max-width:880px){.about{grid-template-columns:1fr}.portrait{max-width:280px;margin-inline:auto}}
+
+/* ---------- Depoimentos ---------- */
+.quote{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;display:flex;flex-direction:column;gap:18px;box-shadow:var(--shadow)}
+.quote .qm{font:600 3.6rem/0.6 Fredoka,sans-serif;color:var(--pink);height:24px}
+.quote blockquote{color:var(--muted);font-style:italic;flex:1}
+.quote figcaption{display:flex;align-items:center;gap:12px;font-weight:700}
+.quote figcaption i{width:40px;height:40px;border-radius:50%;background:var(--tint-b);flex:none}
+.quote:nth-child(2) figcaption i{background:var(--tint-p)}.quote:nth-child(3) figcaption i{background:var(--tint-y)}
+.quote small{display:block;font-weight:400;color:var(--muted);font-size:.85rem}
+
+/* ---------- Regiões ---------- */
+.areas{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.areas .lead{margin:0}
+.places{display:flex;gap:10px;flex-wrap:wrap}
+.places span{padding:10px 18px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:700}
+.places span:first-child{background:var(--blue);border-color:var(--blue);color:#fff}
+.places span.tbd{font-weight:400}
+#regioes{padding:clamp(48px,6vw,72px) 0}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,6vw,80px);align-items:start}
+@media(max-width:880px){.faq{grid-template-columns:1fr}}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;padding:20px 0;font-weight:700;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:60px;transition:color .2s}
+summary::-webkit-details-marker{display:none}
+summary:hover{color:var(--accent)}
+summary i{flex:none;width:32px;height:32px;border-radius:50%;background:var(--chipb);position:relative;transition:transform .35s var(--spring),background-color .2s}
+summary i::before,summary i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2.5px;border-radius:2px;background:var(--accent);transform:translate(-50%,-50%)}
+summary i::after{transform:translate(-50%,-50%) rotate(90deg)}
+details[open] summary i{transform:rotate(45deg);background:var(--tint-y)}
+details p{padding:0 48px 22px 0;color:var(--muted)}
+details[open] p{animation:rise .4s var(--ease)}
+
+/* ---------- Formulário ---------- */
+.fw{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,5vw,64px);align-items:start}
+@media(max-width:880px){.fw{grid-template-columns:1fr}}
+.direct{margin-top:32px;background:var(--blue);color:#fff;border-radius:var(--r-lg);padding:28px;position:relative;overflow:hidden}
+.direct h3{font-size:1.3rem}.direct p{margin:8px 0 20px;opacity:.92;max-width:30ch}
+.direct .pc{right:-18px;bottom:-26px;width:110px}
+.fbox{position:relative}
+.fbox>.pc{right:-22px;top:-34px;width:82px;z-index:1}
+form{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:clamp(22px,3vw,34px);display:grid;gap:18px;box-shadow:var(--shadow)}
+label{font-weight:700;font-size:.95rem;display:grid;gap:7px}
+input,select,textarea{font:inherit;min-height:50px;padding:11px 15px;border-radius:14px;border:2px solid var(--line);background:var(--bg);color:var(--ink);width:100%;transition:border-color .2s,box-shadow .2s}
+input:hover,select:hover,textarea:hover{border-color:#B9CBE6}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(47,111,203,.18)}
+input[aria-invalid=true]{border-color:var(--err)}
+::placeholder{color:var(--muted);opacity:.75}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media(max-width:560px){.r2{grid-template-columns:1fr}}
+fieldset{border:0;padding:0}legend{font-weight:700;font-size:.95rem;margin-bottom:10px}
+.sel{display:flex;flex-wrap:wrap;gap:8px}
+.sel label{display:flex;align-items:center;gap:9px;border:2px solid var(--line);border-radius:999px;padding:8px 15px 8px 11px;font-weight:400;cursor:pointer;min-height:44px;transition:background-color .2s,border-color .2s,transform .2s var(--ease)}
+.sel label:hover{border-color:var(--blue)}
+.sel label:active{transform:scale(.97)}
+.sel input{width:18px;height:18px;min-height:0;accent-color:var(--blue);margin:0}
+.sel label:has(input:checked){background:var(--chipb);border-color:var(--blue);font-weight:700}
+.sel label.pop{animation:pop .5s var(--spring)}
+@keyframes pop{40%{transform:scale(1.07)}}
+.err{color:var(--err);font-size:.85rem;font-weight:700;min-height:1em}
+.err:empty{display:none}
 .fn{font-size:.85rem;color:var(--muted)}
-/* cta+footer */
-.cta{background:var(--blue);color:#fff;text-align:center;border-radius:32px;padding:56px 24px}
-.cta p{margin:12px auto 24px;max-width:52ch}
-footer{background:var(--navy);color:#FFF8EE;padding:56px 0 32px}
-footer .logo{color:#fff}footer a{text-decoration:none;opacity:.9}footer a:hover{text-decoration:underline}
-.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}@media(max-width:800px){.fg{grid-template-columns:1fr 1fr}}@media(max-width:520px){.fg{grid-template-columns:1fr}}
-footer ul{list-style:none;padding:0;display:grid;gap:8px}footer h3{font-size:1.05rem;margin-bottom:10px}
-.copy{border-top:1px solid #2A3C66;margin-top:32px;padding-top:20px;font-size:.85rem;opacity:.8}
-.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,120px);background:var(--navy);color:#fff;padding:14px 22px;border-radius:999px;z-index:40;transition:transform .3s;max-width:92vw;font-weight:700;text-align:center}
+form .btn{justify-self:start}
+@media(max-width:560px){form .btn{justify-self:stretch}}
+
+/* ---------- CTA final ---------- */
+.cta{position:relative;overflow:hidden;background:var(--blue);color:#fff;text-align:center;border-radius:clamp(28px,4vw,48px);padding:clamp(56px,8vw,88px) 24px}
+.cta h2{position:relative;z-index:1}
+.cta p{position:relative;z-index:1;margin:6px auto 28px;max-width:44ch;opacity:.92;font-size:1.08rem}
+.cta .btn{z-index:1}
+@media(max-width:700px){.cta .m-hide{display:none}}
+
+/* ---------- Rodapé ---------- */
+footer{background:var(--navy);color:#FFF8EE;padding:64px 0 32px;margin-top:clamp(72px,9vw,112px)}
+footer .logo{color:#fff}footer .logo .sub{color:#F8A8C6}
+footer a{text-decoration:none;opacity:.9}footer a:hover{text-decoration:underline;opacity:1}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px}
+@media(max-width:800px){.fg{grid-template-columns:1fr 1fr}}@media(max-width:520px){.fg{grid-template-columns:1fr}}
+footer ul{list-style:none;padding:0;display:grid;gap:8px}
+footer h3{font-size:1rem;margin-bottom:12px;color:#F8A8C6}
+.copy{border-top:1px solid #2A3C66;margin-top:40px;padding-top:20px;font-size:.85rem;opacity:.8}
+
+/* ---------- Avisos e WhatsApp fixo ---------- */
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140px);background:var(--navy);color:#fff;padding:14px 22px;border-radius:999px;z-index:40;transition:transform .4s var(--spring);max-width:min(92vw,440px);font-weight:700;text-align:center;box-shadow:0 12px 30px -10px rgba(0,0,0,.4)}
 .toast.on{transform:translate(-50%,0)}
-.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:25;width:58px;height:58px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:25;width:58px;height:58px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:0 10px 24px -6px rgba(0,0,0,.35);transition:transform .3s var(--spring),background-color .2s;animation:rise .6s var(--ease) 1.6s backwards}
+.wa:hover{transform:scale(1.07);background:var(--green-d)}
+.wa:active{transform:scale(.96)}
+
+/* ---------- Telas pequenas: menos decoração ---------- */
+@media(max-width:700px){.m-hide{display:none!important}.tray>.pc{display:none}.fbox>.pc{display:none}}
+
+/* ---------- Movimento reduzido ---------- */
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important;scroll-behavior:auto!important}
+ html.js [data-rv],html.js .fit .pc,html.js .steps .n{opacity:1!important;translate:none!important;scale:none!important;clip-path:none!important}
+ html.js .steps::before{transform:none!important}
+}
 </style>
 </head>
 <body>
+<!-- Peças Looping: formas da marca reutilizadas em toda a página -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+ <symbol id="p-circ" viewBox="0 0 100 106"><circle cx="50" cy="56" r="48" style="fill:var(--pd)"/><circle cx="50" cy="50" r="48" style="fill:var(--pf)"/></symbol>
+ <symbol id="p-block" viewBox="0 0 100 106"><rect x="2" y="8" width="96" height="96" rx="26" style="fill:var(--pd)"/><rect x="2" y="2" width="96" height="96" rx="26" style="fill:var(--pf)"/></symbol>
+ <symbol id="p-arch" viewBox="-5 -5 110 96"><path transform="translate(0 6)" d="M0 80V50a50 50 0 0 1 100 0v30H70V50a20 20 0 0 0-40 0v30z" style="fill:var(--pd);stroke:var(--pd);stroke-width:8;stroke-linejoin:round"/><path d="M0 80V50a50 50 0 0 1 100 0v30H70V50a20 20 0 0 0-40 0v30z" style="fill:var(--pf);stroke:var(--pf);stroke-width:8;stroke-linejoin:round"/></symbol>
+ <symbol id="p-half" viewBox="-5 -5 110 66"><path transform="translate(0 6)" d="M0 50a50 50 0 0 1 100 0z" style="fill:var(--pd);stroke:var(--pd);stroke-width:8;stroke-linejoin:round"/><path d="M0 50a50 50 0 0 1 100 0z" style="fill:var(--pf);stroke:var(--pf);stroke-width:8;stroke-linejoin:round"/></symbol>
+ <symbol id="p-lens" viewBox="0 0 58 106"><path transform="translate(0 6)" d="M29 0a57.7 57.7 0 0 1 0 100A57.7 57.7 0 0 1 29 0z" style="fill:var(--pd)"/><path d="M29 0a57.7 57.7 0 0 1 0 100A57.7 57.7 0 0 1 29 0z" style="fill:var(--pf)"/></symbol>
+ <symbol id="p-pill" viewBox="0 0 130 56"><rect x="2" y="8" width="126" height="46" rx="23" style="fill:var(--pd)"/><rect x="2" y="2" width="126" height="46" rx="23" style="fill:var(--pf)"/></symbol>
+</svg>
+
 <header>
  <div class="w nav">
-  <a class="logo f" href="#topo" aria-label="Looping Brinquedos, início">L<svg viewBox="8 22 84 56" aria-hidden="true"><circle cx="36" cy="50" r="28" fill="#2F6FCB"/><circle cx="64" cy="50" r="28" fill="#F28BB0"/><path d="M50 25.75A28 28 0 0 1 50 74.25A28 28 0 0 1 50 25.75Z" fill="#1B2A4A"/></svg>ping</a>
-  <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <a class="logo f" href="#topo" aria-label="Looping Brinquedos, início"><span class="wm">L<svg viewBox="8 22 84 56" aria-hidden="true"><circle cx="36" cy="50" r="28" fill="#2F6FCB"/><circle cx="64" cy="50" r="28" fill="#F28BB0"/><path d="M50 25.75A28 28 0 0 1 50 74.25A28 28 0 0 1 50 25.75Z" fill="#1B2A4A"/></svg>ping</span><span class="sub">BRINQUEDOS</span></a>
+  <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
   <nav class="menu" id="menu" aria-label="Principal">
    <a href="#brinquedos">Brinquedos</a><a href="#como-funciona">Como funciona</a><a href="#sobre">Sobre nós</a><a href="#depoimentos">Depoimentos</a><a href="#contato">Contato</a>
    <a class="btn b1" href="#orcamento">Solicitar orçamento</a>
@@ -133,168 +385,252 @@ footer ul{list-style:none;padding:0;display:grid;gap:8px}footer h3{font-size:1.0
 <main id="topo">
 <section class="hero"><div class="w hg">
  <div>
-  <span class="tag">Locação de brinquedos · Praia Grande/SP</span>
-  <h1>Sua festa vira o dia que as crianças vão contar por semanas.</h1>
-  <p class="lead">Pula-pula, cama elástica, piscina de bolinhas e mais. Você escolhe, a Looping cuida do resto, e você aproveita a festa com tranquilidade.</p>
-  <div class="ctas"><a class="btn bg" href="#orcamento">Pedir orçamento pelo WhatsApp</a><a class="btn b2" href="#brinquedos">Ver brinquedos</a></div>
+  <span class="tag seq"><svg viewBox="8 22 84 56" aria-hidden="true"><circle cx="36" cy="50" r="28" fill="#2F6FCB"/><circle cx="64" cy="50" r="28" fill="#F28BB0"/><path d="M50 25.75A28 28 0 0 1 50 74.25A28 28 0 0 1 50 25.75Z" fill="#1B2A4A"/></svg>Locação de brinquedos em Praia Grande/SP</span>
+  <h1 class="seq" style="--sd:.1s">O <em>pula-pula</em> já pode entrar na lista da festa.</h1>
+  <p class="lead seq" style="--sd:.25s">Pula-pula, cama elástica, piscina de bolinhas e outros brinquedos para aniversários, festas de escola e eventos de condomínio. Você escolhe pelo site e recebe o orçamento no WhatsApp.</p>
+  <div class="ctas seq" style="--sd:.4s"><a class="btn bg" href="#orcamento">Pedir orçamento <span class="ar" aria-hidden="true">→</span></a><a class="btn b2" href="#brinquedos">Ver os brinquedos</a></div>
  </div>
  <div>
-  <div class="art" role="img" aria-label="Ilustração de um pula-pula colorido sobre os dois círculos da marca Looping">
-   <div class="c1"></div><div class="c2"></div>
-   <svg viewBox="0 0 200 150" aria-hidden="true"><rect x="22" y="58" width="156" height="76" rx="14" fill="#FFC83D"/><rect x="22" y="58" width="156" height="14" fill="#F28BB0"/><circle cx="34" cy="40" r="22" fill="#2F6FCB"/><circle cx="166" cy="40" r="22" fill="#2F6FCB"/><rect x="12" y="40" width="40" height="40" rx="6" fill="#2F6FCB"/><rect x="148" y="40" width="40" height="40" rx="6" fill="#2F6FCB"/><circle cx="100" cy="48" r="16" fill="#FFF8EE"/><path d="M76 134v-34a24 24 0 0 1 48 0v34z" fill="#1B2A4A"/><circle cx="34" cy="96" r="10" fill="#FFF8EE"/><circle cx="166" cy="96" r="10" fill="#FFF8EE"/></svg>
+  <div class="stage" data-pieces role="img" aria-label="Ilustração de um pula-pula colorido sobre o símbolo da Looping, cercado por peças geométricas">
+   <svg class="mark" viewBox="8 22 84 56" aria-hidden="true"><circle class="l" cx="36" cy="50" r="28" fill="#2F6FCB"/><circle class="r" cx="64" cy="50" r="28" fill="#F28BB0"/><path class="lens" d="M50 25.75A28 28 0 0 1 50 74.25A28 28 0 0 1 50 25.75Z" fill="#FFF8EE"/></svg>
+   <div class="toy" id="heroToy"></div>
+   <svg viewBox="-5 -5 110 96" class="pc ky" style="left:-2%;bottom:3%;width:19%;--r:-8deg;--t:11s;--dy:-10px;--fd:1.1s;--fy:-80px" aria-hidden="true"><use href="#p-arch"/></svg>
+   <svg viewBox="0 0 130 56" class="pc kp" style="right:0;top:3%;width:21%;--r:16deg;--t:9s;--dr:-6deg;--fd:1.25s;--fx:40px;--fy:-30px" aria-hidden="true"><use href="#p-pill"/></svg>
+   <svg viewBox="0 0 58 106" class="pc kn" style="left:5%;top:2%;width:7%;--r:-20deg;--t:12s;--dr:10deg;--fd:1.4s" aria-hidden="true"><use href="#p-lens"/></svg>
+   <svg viewBox="0 0 100 106" class="pc kb m-hide" style="right:-1%;bottom:20%;width:12%;--r:12deg;--t:10s;--dy:-14px;--fd:1.5s;--fx:30px;--fy:0px" aria-hidden="true"><use href="#p-block"/></svg>
+   <svg viewBox="-5 -5 110 66" class="pc kp m-hide" style="right:24%;bottom:0;width:13%;--t:13s;--dr:-4deg;--dy:-6px;--fd:1.7s;--fy:40px" aria-hidden="true"><use href="#p-half"/></svg>
   </div>
-  <p class="note">Ilustração demonstrativa. Fotos reais da Looping entram aqui.</p>
+  <p class="note seq" style="--sd:1.2s">Ilustração provisória. As fotos dos brinquedos da Looping entram neste espaço.</p>
  </div>
 </div></section>
 
-<section class="sky" id="diferenciais"><div class="w">
- <h2>Tranquilidade para os pais, diversão para as crianças</h2>
- <p class="lead">Itens marcados como “a confirmar” só serão publicados depois que a proprietária validar.</p>
- <div class="grid g3">
-  <div class="box"><div class="ico">🧼</div><h3>Higienização</h3><p>Brinquedos limpos antes de cada festa.</p><span class="pend">a confirmar</span></div>
-  <div class="box"><div class="ico">🛡️</div><h3>Segurança</h3><p>Rede de proteção e monitor na festa.</p><span class="pend">a confirmar</span></div>
-  <div class="box"><div class="ico">🔧</div><h3>Montagem e desmontagem</h3><p>Equipe cuida da instalação no local.</p><span class="pend">a confirmar</span></div>
-  <div class="box"><div class="ico">⏰</div><h3>Pontualidade</h3><p>Entrega no horário combinado.</p><span class="pend">a confirmar</span></div>
-  <div class="box"><div class="ico">🎠</div><h3>Variedade</h3><p>Opções para várias idades e espaços.</p><span class="pend">a confirmar</span></div>
-  <div class="box"><div class="ico">💬</div><h3>Atendimento pelo WhatsApp</h3><p>Orçamento direto com quem cuida da sua festa.</p></div>
+<section class="tray" id="diferenciais"><div class="w care">
+ <div class="care-l">
+  <h2 data-rv>Os cuidados com cada festa</h2>
+  <p class="lead" data-rv style="--i:1">Esta lista mostra o que a Looping pode garantir aos pais. Os itens com o selo “a confirmar” só vão ao ar depois que a empresa validar cada um.</p>
+  <div class="tower fit" data-rv="fade" data-pieces aria-hidden="true">
+   <svg viewBox="-5 -5 110 96" class="pc ky" style="left:40px;bottom:0;width:160px;--t:0s;--fd:.1s;--fy:-140px;animation:none"><use href="#p-arch"/></svg>
+   <svg viewBox="0 0 100 106" class="pc kb" style="left:52px;bottom:128px;width:70px;--r:-4deg;--fd:.35s;--fy:-160px;animation:none"><use href="#p-block"/></svg>
+   <svg viewBox="-5 -5 110 66" class="pc kp" style="left:124px;bottom:128px;width:84px;--fd:.55s;--fy:-160px;animation:none"><use href="#p-half"/></svg>
+   <svg viewBox="0 0 100 106" class="pc kc" style="left:150px;bottom:178px;width:36px;--fd:.75s;--fy:-120px;--t:6s;--dy:-10px"><use href="#p-circ"/></svg>
+   <svg viewBox="0 0 58 106" class="pc kn" style="left:74px;bottom:200px;width:22px;--r:12deg;--fd:.9s;--fy:-120px;--t:9s;--dr:-14deg"><use href="#p-lens"/></svg>
+  </div>
  </div>
+ <ul class="list">
+  <li data-rv><span class="mk"><svg viewBox="0 0 100 106" class="kb" aria-hidden="true"><use href="#p-circ"/></svg></span><h3>Higienização</h3><span class="pend">a confirmar</span><p>Limpeza dos brinquedos antes de cada festa.</p></li>
+  <li data-rv style="--i:1"><span class="mk"><svg viewBox="0 0 100 106" class="kp" aria-hidden="true"><use href="#p-block"/></svg></span><h3>Segurança</h3><span class="pend">a confirmar</span><p>Rede de proteção nos brinquedos e monitor acompanhando as crianças.</p></li>
+  <li data-rv style="--i:2"><span class="mk"><svg viewBox="-5 -5 110 96" class="ky" aria-hidden="true"><use href="#p-arch"/></svg></span><h3>Montagem e desmontagem</h3><span class="pend">a confirmar</span><p>A equipe instala tudo no local e recolhe no fim da festa.</p></li>
+  <li data-rv style="--i:3"><span class="mk"><svg viewBox="-5 -5 110 66" class="kb" aria-hidden="true"><use href="#p-half"/></svg></span><h3>Pontualidade</h3><span class="pend">a confirmar</span><p>Entrega no horário combinado.</p></li>
+  <li data-rv style="--i:4"><span class="mk"><svg viewBox="0 0 58 106" class="kp" style="width:24px" aria-hidden="true"><use href="#p-lens"/></svg></span><h3>Variedade</h3><span class="pend">a confirmar</span><p>Opções para várias idades e tamanhos de espaço.</p></li>
+  <li data-rv style="--i:5"><span class="mk"><svg viewBox="0 0 100 106" class="ky" aria-hidden="true"><use href="#p-block"/></svg></span><h3>Atendimento direto</h3><span class="pend ok">confirmado</span><p>Orçamento e dúvidas resolvidos na mesma conversa de WhatsApp.</p></li>
+ </ul>
 </div></section>
 
 <section id="brinquedos"><div class="w">
- <h2>Escolha os brinquedos da sua festa</h2>
- <p class="lead">Catálogo de demonstração. Nomes, medidas, idades e preços serão preenchidos com os dados reais da Looping.</p>
- <div class="chips" role="group" aria-label="Filtrar por categoria" id="chips"></div>
+ <div class="cat-head">
+  <div><h2 data-rv>Escolha os brinquedos da sua festa</h2>
+  <p class="lead" data-rv style="--i:1">Cada cartão mostra a idade indicada, o espaço necessário e quantas crianças brincam ao mesmo tempo. Esses dados e os preços entram assim que a Looping enviar o catálogo.</p></div>
+  <div class="chips" role="group" aria-label="Filtrar por categoria" id="chips" data-rv style="--i:2"></div>
+ </div>
  <div class="grid g3" id="cat" aria-live="polite"></div>
 </div></section>
 
-<section class="sky" id="como-funciona"><div class="w">
- <h2>Como funciona</h2><p class="lead">Quatro passos, poucos minutos.</p>
- <div class="grid g4">
-  <div class="step"><div class="n"><i></i><u></u><b>1</b></div><h3>Escolha os brinquedos</h3><p>Navegue pelo catálogo e marque os favoritos.</p></div>
-  <div class="step"><div class="n"><i></i><u></u><b>2</b></div><h3>Informe data e local</h3><p>Diga quando e onde será a festa.</p></div>
-  <div class="step"><div class="n"><i></i><u></u><b>3</b></div><h3>Receba seu orçamento</h3><p>A resposta chega pelo WhatsApp.</p></div>
-  <div class="step"><div class="n"><i></i><u></u><b>4</b></div><h3>Aproveite a diversão</h3><p>Hora de curtir a festa.</p></div>
- </div>
+<section class="tray" id="como-funciona">
+ <svg viewBox="0 0 130 56" class="pc kp" style="right:8%;top:-24px;width:112px;--r:-6deg;--t:12s;--dy:-8px" aria-hidden="true"><use href="#p-pill"/></svg>
+ <div class="w">
+ <div class="head"><h2 data-rv>Como funciona a locação</h2><p class="lead" data-rv style="--i:1">Você resolve tudo pelo celular, do catálogo até a confirmação da data.</p></div>
+ <ol class="steps" data-rv="fade">
+  <li class="step"><span class="n" style="--i:0"><svg viewBox="0 0 100 106" class="kb" aria-hidden="true"><use href="#p-circ"/></svg><b>1</b></span><h3>Escolha os brinquedos</h3><p>Marque no catálogo o que combina com a idade das crianças e com o espaço da festa.</p></li>
+  <li class="step"><span class="n" style="--i:1"><svg viewBox="0 0 100 106" class="kp" aria-hidden="true"><use href="#p-block"/></svg><b>2</b></span><h3>Conte a data e o local</h3><p>O formulário junta tudo numa mensagem só.</p></li>
+  <li class="step"><span class="n dk" style="--i:2"><svg viewBox="0 0 100 106" class="ky" aria-hidden="true"><use href="#p-circ"/></svg><b>3</b></span><h3>Receba o orçamento</h3><p>A Looping responde no WhatsApp com o valor e a disponibilidade da data.</p></li>
+  <li class="step"><span class="n" style="--i:3"><svg viewBox="0 0 100 106" class="kb" aria-hidden="true"><use href="#p-block"/></svg><b>4</b></span><h3>Aproveite a festa</h3><p>No dia, é só aproveitar com as crianças e os convidados.</p></li>
+ </ol>
 </div></section>
 
 <section id="galeria"><div class="w">
- <h2>Festas que ficam na memória</h2><p class="lead">Espaço reservado para fotos reais de festas da Looping. As cores abaixo são ilustrativas.</p>
+ <div class="head"><h2 data-rv>Festas da Looping</h2><p class="lead" data-rv style="--i:1">Este espaço vai receber fotos de festas reais. Por enquanto, cada bloco marca onde uma imagem entra.</p></div>
  <div class="gal">
-  <div class="big" style="background:var(--blue)">Foto real: festa com pula-pula</div>
-  <div style="background:var(--pink);color:var(--navy)">Foto real</div><div style="background:var(--sun);color:var(--navy)">Foto real</div>
-  <div style="background:var(--navy)">Foto real</div><div style="background:var(--green)">Foto real</div>
+  <figure class="big t-b" data-rv="clip"><svg viewBox="-5 -5 110 96" class="kb" aria-hidden="true"><use href="#p-arch"/></svg><figcaption>Foto de uma festa com pula-pula</figcaption></figure>
+  <figure class="t-p" data-rv="clip" style="--i:1"><svg viewBox="0 0 100 106" class="kp" aria-hidden="true"><use href="#p-circ"/></svg><figcaption>Foto de festa</figcaption></figure>
+  <figure class="tall t-y" data-rv="clip" style="--i:2"><svg viewBox="-5 -5 110 66" class="ky" aria-hidden="true"><use href="#p-half"/></svg><figcaption>Foto de festa</figcaption></figure>
+  <figure class="t-n" data-rv="clip" style="--i:3"><svg viewBox="0 0 100 106" class="kb" aria-hidden="true"><use href="#p-block"/></svg><figcaption>Foto de festa</figcaption></figure>
  </div>
 </div></section>
 
-<section class="sky" id="sobre"><div class="w">
- <h2>Uma empresa de verdade por trás da sua festa</h2>
- <p class="lead">A Looping atende festas em Praia Grande/SP. A história, a experiência e a foto da proprietária entram aqui.</p>
- <div class="grid g3">
-  <div class="box"><h3>Nossa história</h3><p>[texto da proprietária]</p></div>
-  <div class="box"><h3>Compromisso com você</h3><p>[texto da proprietária]</p></div>
-  <div class="box"><h3>Valores</h3><p>[texto da proprietária]</p></div>
+<section class="tray" id="sobre">
+ <svg viewBox="0 0 100 106" class="pc kb" style="left:6%;top:-30px;width:64px;--t:10s;--dy:-10px;--dr:8deg" aria-hidden="true"><use href="#p-circ"/></svg>
+ <div class="w about">
+ <div class="portrait" data-rv="scale"><svg viewBox="-5 -5 110 66" class="ky" aria-hidden="true"><use href="#p-half"/></svg><span>Foto da proprietária</span></div>
+ <div>
+  <h2 data-rv>Quem está por trás da Looping</h2>
+  <p class="lead" data-rv style="--i:1">A Looping é uma empresa de Praia Grande/SP. A foto, a história e os valores da proprietária entram nesta seção.</p>
+  <div class="vals">
+   <div data-rv style="--i:2"><h3>Nossa história</h3><p class="ph-t">[texto da proprietária]</p></div>
+   <div data-rv style="--i:3"><h3>Como trabalhamos</h3><p class="ph-t">[texto da proprietária]</p></div>
+   <div data-rv style="--i:4"><h3>O que valorizamos</h3><p class="ph-t">[texto da proprietária]</p></div>
+  </div>
  </div>
 </div></section>
 
 <section id="depoimentos"><div class="w">
- <h2>O que as famílias dizem</h2><p class="lead">Layout de demonstração. Nenhum depoimento real foi publicado ainda.</p>
+ <div class="head"><h2 data-rv>O que as famílias dizem</h2><p class="lead" data-rv style="--i:1">Os depoimentos serão publicados com a autorização dos clientes.</p></div>
  <div class="grid g3">
-  <figure class="box"><blockquote>[Depoimento real de cliente]</blockquote><figcaption class="pend">Nome do cliente · a enviar</figcaption></figure>
-  <figure class="box"><blockquote>[Depoimento real de cliente]</blockquote><figcaption class="pend">Nome do cliente · a enviar</figcaption></figure>
-  <figure class="box"><blockquote>[Depoimento real de cliente]</blockquote><figcaption class="pend">Nome do cliente · a enviar</figcaption></figure>
+  <figure class="quote" data-rv><span class="qm" aria-hidden="true">“</span><blockquote>[Depoimento de cliente]</blockquote><figcaption><i aria-hidden="true"></i><span>Nome do cliente<small>a enviar</small></span></figcaption></figure>
+  <figure class="quote" data-rv style="--i:1"><span class="qm" aria-hidden="true">“</span><blockquote>[Depoimento de cliente]</blockquote><figcaption><i aria-hidden="true"></i><span>Nome do cliente<small>a enviar</small></span></figcaption></figure>
+  <figure class="quote" data-rv style="--i:2"><span class="qm" aria-hidden="true">“</span><blockquote>[Depoimento de cliente]</blockquote><figcaption><i aria-hidden="true"></i><span>Nome do cliente<small>a enviar</small></span></figcaption></figure>
  </div>
 </div></section>
 
-<section class="sky" id="regioes"><div class="w">
- <h2>Regiões atendidas</h2><p class="lead">Base de atuação: Praia Grande/SP. Outras cidades e bairros serão confirmados.</p>
- <div class="cp" style="font-size:1rem"><span>Praia Grande/SP</span><span>[cidade a confirmar]</span><span>[cidade a confirmar]</span><span>[bairros a confirmar]</span></div>
+<section class="tray" id="regioes"><div class="w areas">
+ <div data-rv><h2>Onde a Looping atende</h2><p class="lead">A base é Praia Grande/SP. As outras cidades e os bairros atendidos ainda serão confirmados.</p></div>
+ <div class="places" data-rv style="--i:1"><span>Praia Grande/SP</span><span class="tbd">cidade a confirmar</span><span class="tbd">cidade a confirmar</span><span class="tbd">bairros a confirmar</span></div>
 </div></section>
 
-<section id="faq"><div class="w" style="max-width:820px">
- <h2>Perguntas frequentes</h2><p class="lead">Respostas provisórias, a editar com as regras reais da Looping.</p>
- <details><summary>Como funciona a contratação?</summary><p>Você escolhe os brinquedos, envia data e local e recebe o orçamento pelo WhatsApp. [confirmar etapas de reserva]</p></details>
- <details><summary>Com quanto tempo de antecedência devo reservar?</summary><p>[a confirmar]</p></details>
- <details><summary>Entrega e montagem estão incluídas?</summary><p>[a confirmar]</p></details>
- <details><summary>Como funciona o pagamento?</summary><p>[a confirmar]</p></details>
- <details><summary>Os brinquedos são higienizados?</summary><p>[a confirmar]</p></details>
- <details><summary>Existe limite de idade ou peso?</summary><p>[a confirmar por brinquedo]</p></details>
+<section id="faq"><div class="w faq">
+ <div><h2 data-rv>Perguntas frequentes</h2><p class="lead" data-rv style="--i:1">As respostas ficam completas quando a Looping confirmar as regras de reserva, entrega e pagamento.</p></div>
+ <div data-rv style="--i:1">
+  <details><summary>Como funciona a contratação?<i aria-hidden="true"></i></summary><p>Você escolhe os brinquedos, envia a data e o local pelo formulário e recebe o orçamento no WhatsApp. As etapas da reserva serão confirmadas pela Looping.</p></details>
+  <details><summary>Com quanto tempo de antecedência devo reservar?<i aria-hidden="true"></i></summary><p class="ph-t">Resposta a confirmar pela Looping.</p></details>
+  <details><summary>Entrega e montagem estão incluídas?<i aria-hidden="true"></i></summary><p class="ph-t">Resposta a confirmar pela Looping.</p></details>
+  <details><summary>Como funciona o pagamento?<i aria-hidden="true"></i></summary><p class="ph-t">Resposta a confirmar pela Looping.</p></details>
+  <details><summary>Os brinquedos são higienizados?<i aria-hidden="true"></i></summary><p class="ph-t">Resposta a confirmar pela Looping.</p></details>
+  <details><summary>Existe limite de idade ou peso?<i aria-hidden="true"></i></summary><p class="ph-t">Resposta a confirmar para cada brinquedo.</p></details>
+ </div>
 </div></section>
 
-<section class="sky" id="orcamento"><div class="w fw">
- <div><h2>Peça seu orçamento</h2><p class="lead">Preencha e abra a conversa no WhatsApp com tudo organizado. Nada é enviado antes de você tocar em enviar no próprio WhatsApp.</p>
- <div class="cta" style="text-align:left;padding:28px"><h3>Prefere falar direto?</h3><p style="margin:8px 0 16px">Chame no WhatsApp e conte da sua festa.</p><a class="btn bg wal" href="#" style="background:#fff;color:var(--green)">Abrir WhatsApp</a></div></div>
- <form id="f" novalidate>
-  <div class="r2"><label>Nome<input name="nome" autocomplete="name" required><span class="err"></span></label>
-  <label>Seu WhatsApp<input name="zap" type="tel" inputmode="tel" autocomplete="tel" placeholder="(13) 90000-0000" required><span class="err"></span></label></div>
-  <div class="r2"><label>Data da festa<input name="data" type="date" required><span class="err"></span></label>
-  <label>Cidade ou bairro<input name="local" required><span class="err"></span></label></div>
-  <label>Tipo de evento<select name="tipo"><option>Aniversário infantil</option><option>Festa escolar</option><option>Evento de condomínio</option><option>Outro</option></select></label>
-  <fieldset style="border:0;padding:0"><legend style="font-weight:700;margin-bottom:8px">Brinquedos desejados</legend><div class="sel" id="sel"></div></fieldset>
-  <label>Observações<textarea name="obs" rows="3"></textarea></label>
-  <button class="btn bg" type="submit">Enviar pelo WhatsApp</button>
-  <p class="fn" id="wn"></p>
- </form>
+<section class="tray" id="orcamento"><div class="w fw">
+ <div>
+  <h2 data-rv>Peça seu orçamento</h2>
+  <p class="lead" data-rv style="--i:1">Preencha os campos e o WhatsApp abre com a mensagem pronta. Nada é enviado até você tocar em enviar dentro do aplicativo.</p>
+  <div class="direct" data-rv style="--i:2"><h3>Prefere conversar direto?</h3><p>Chame no WhatsApp e conte como vai ser a festa.</p><a class="btn bw wal" href="#">Abrir WhatsApp</a><svg viewBox="0 0 100 106" class="pc kp" aria-hidden="true" style="--r:-12deg;--t:11s"><use href="#p-circ"/></svg></div>
+ </div>
+ <div class="fbox" data-rv style="--i:1">
+  <svg viewBox="-5 -5 110 96" class="pc ky" style="--r:10deg;--t:9s;--dr:-6deg" aria-hidden="true"><use href="#p-arch"/></svg>
+  <form id="f" novalidate>
+   <div class="r2"><label>Nome<input name="nome" autocomplete="name" required><span class="err"></span></label>
+   <label>Seu WhatsApp<input name="zap" type="tel" inputmode="tel" autocomplete="tel" placeholder="(13) 90000-0000" required><span class="err"></span></label></div>
+   <div class="r2"><label>Data da festa<input name="data" type="date" required><span class="err"></span></label>
+   <label>Cidade ou bairro<input name="local" autocomplete="address-level2" placeholder="Ex.: Boqueirão, Praia Grande" required><span class="err"></span></label></div>
+   <label>Tipo de evento<select name="tipo"><option>Aniversário infantil</option><option>Festa escolar</option><option>Evento de condomínio</option><option>Outro</option></select></label>
+   <fieldset><legend>Brinquedos desejados</legend><div class="sel" id="sel"></div></fieldset>
+   <label>Observações<textarea name="obs" rows="3" placeholder="Horário, tema e número de convidados, por exemplo."></textarea></label>
+   <button class="btn bg" type="submit">Enviar pelo WhatsApp <span class="ar" aria-hidden="true">→</span></button>
+   <p class="fn" id="wn"></p>
+  </form>
+ </div>
 </div></section>
 
-<section><div class="w"><div class="cta"><h2>Vamos fazer sua próxima festa inesquecível?</h2><p>Conte a data e o local. A Looping responde com o orçamento.</p><a class="btn wal" href="#" style="background:#fff;color:var(--green)">Chamar no WhatsApp</a></div></div></section>
+<section style="padding-bottom:0"><div class="w">
+ <div class="cta fit" data-rv="scale" data-pieces>
+  <svg viewBox="0 0 100 106" class="pc kp" style="left:-36px;bottom:-40px;width:150px;--fx:-60px;--fy:40px;--fd:.15s;--t:12s;--dy:-8px" aria-hidden="true"><use href="#p-circ"/></svg>
+  <svg viewBox="-5 -5 110 66" class="pc ky" style="right:6%;bottom:-6px;width:110px;--fy:60px;--fd:.3s;--t:10s;--dy:-6px" aria-hidden="true"><use href="#p-half"/></svg>
+  <svg viewBox="0 0 100 106" class="pc kc m-hide" style="right:-18px;top:18%;width:64px;--r:14deg;--fx:60px;--fy:0px;--fd:.45s;--t:9s" aria-hidden="true"><use href="#p-block"/></svg>
+  <svg viewBox="0 0 58 106" class="pc kc m-hide" style="left:12%;top:14%;width:22px;--r:-18deg;--fd:.6s;--t:8s" aria-hidden="true"><use href="#p-lens"/></svg>
+  <h2>Já tem a data da festa?</h2>
+  <p>Conte quando e onde vai ser. A Looping responde com o orçamento pelo WhatsApp.</p>
+  <a class="btn bw wal" href="#">Chamar no WhatsApp</a>
+ </div>
+</div></section>
 </main>
 
 <footer id="contato"><div class="w">
  <div class="fg">
-  <div><a class="logo f" href="#topo" aria-label="Looping">L<svg viewBox="8 22 84 56" aria-hidden="true"><circle cx="36" cy="50" r="28" fill="#7DB4FF"/><circle cx="64" cy="50" r="28" fill="#F8A8C6"/><path d="M50 25.75A28 28 0 0 1 50 74.25A28 28 0 0 1 50 25.75Z" fill="#FFF8EE"/></svg>ping</a><p style="margin-top:12px;max-width:34ch">Locação de brinquedos para festas em Praia Grande/SP.</p></div>
+  <div><a class="logo f" href="#topo" aria-label="Looping Brinquedos, início"><span class="wm">L<svg viewBox="8 22 84 56" aria-hidden="true"><circle cx="36" cy="50" r="28" fill="#7DB4FF"/><circle cx="64" cy="50" r="28" fill="#F8A8C6"/><path d="M50 25.75A28 28 0 0 1 50 74.25A28 28 0 0 1 50 25.75Z" fill="#FFF8EE"/></svg>ping</span><span class="sub">BRINQUEDOS</span></a><p style="margin-top:16px;max-width:30ch;opacity:.85">Locação de brinquedos para festas em Praia Grande/SP.</p></div>
   <div><h3>Navegar</h3><ul><li><a href="#brinquedos">Brinquedos</a></li><li><a href="#como-funciona">Como funciona</a></li><li><a href="#faq">Dúvidas</a></li><li><a href="#orcamento">Orçamento</a></li></ul></div>
   <div><h3>Contato</h3><ul><li><a class="wal" href="#">WhatsApp: [número]</a></li><li><a href="https://www.instagram.com/loopingbrinquedos" target="_blank" rel="noopener">@loopingbrinquedos</a></li></ul></div>
-  <div><h3>Regiões</h3><ul><li>Praia Grande/SP</li><li>[outras a confirmar]</li></ul></div>
+  <div><h3>Regiões</h3><ul><li>Praia Grande/SP</li><li>Outras cidades a confirmar</li></ul></div>
  </div>
- <p class="copy">© 2026 Looping Brinquedos. Página de preview com conteúdo demonstrativo.</p>
+ <p class="copy">© 2026 Looping Brinquedos. Página de prévia com conteúdo demonstrativo.</p>
 </div></footer>
 
-<a class="wa wal" href="#" aria-label="Chamar no WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.500-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.2.1.300 0 .5l-.4.600c-.1.100-.3.300-.1.600.7 1.100 1.500 1.800 2.600 2.400.3.100.5.100.6-.1l.8-1c.2-.2.400-.2.600-.1l1.900.9c.3.100.4.200.5.300.1.300.1.800-.1 1.400z"/></svg></a>
+<a class="wa wal" href="#" aria-label="Chamar no WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6c-.1.1-.3.3-.1.6.7 1.1 1.5 1.8 2.6 2.4.3.1.5.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.3.1.8-.1 1.4z"/></svg></a>
 <div class="toast" id="toast" role="status"></div>
 
 <script>
 // CONFIGURAÇÃO: coloque o WhatsApp comercial com DDI+DDD, só números. Ex.: "5513900000000"
 var WHATSAPP_NUMBER = "";
+// Catálogo: preencha idade, espaço, crianças e preço quando a Looping enviar os dados reais.
 var TOYS = [
- {n:"Pula-pula castelinho",c:"Pula-pula",d:"Clássico para as crianças pularem à vontade.",s:"castle"},
- {n:"Pula-pula temático",c:"Pula-pula",d:"Cores e formas para combinar com o tema da festa.",s:"castle2"},
- {n:"Cama elástica",c:"Cama elástica",d:"Salto seguro para a criançada gastar energia.",s:"tramp"},
- {n:"Piscina de bolinhas",c:"Piscina de bolinhas",d:"Espaço macio e colorido para os pequenos.",s:"balls"},
- {n:"Tobogã inflável",c:"Tobogãs",d:"Subida, escorregada e muita risada.",s:"slide"},
- {n:"Futebol de sabão",c:"Outros",d:"Campo escorregadio para a turma maior.",s:"soap"}
+ {n:"Pula-pula castelinho",c:"Pula-pula",d:"O clássico das festas infantis, com torres e entrada em arco.",s:"castle",t:"b",idade:"",espaco:"",criancas:"",preco:""},
+ {n:"Pula-pula temático",c:"Pula-pula",d:"Cores e formas que combinam com o tema da festa.",s:"castle2",t:"y",idade:"",espaco:"",criancas:"",preco:""},
+ {n:"Cama elástica",c:"Cama elástica",d:"Para a turma que gosta de pular alto e gastar energia.",s:"tramp",t:"p",idade:"",espaco:"",criancas:"",preco:""},
+ {n:"Piscina de bolinhas",c:"Piscina de bolinhas",d:"Macia e colorida, ideal para os menores.",s:"balls",t:"y",idade:"",espaco:"",criancas:"",preco:""},
+ {n:"Tobogã inflável",c:"Tobogãs",d:"Subir, escorregar e voltar para a fila.",s:"slide",t:"b",idade:"",espaco:"",criancas:"",preco:""},
+ {n:"Futebol de sabão",c:"Outros",d:"Partida escorregadia para as crianças mais velhas.",s:"soap",t:"p",idade:"",espaco:"",criancas:"",preco:""}
 ];
-var P="#F28BB0",B="#2F6FCB",Y="#FFC83D",N="#1B2A4A",C="#FFF8EE",G="#1B7F46";
+var P="#F28BB0",PD="#D7678F",PL="#F7B8CF",B="#2F6FCB",BD="#1F56A8",BL="#6E9BE0",Y="#FFC83D",YD="#E0A21C",N="#1B2A4A",C="#FFF8EE",G="#1B7F46",GD="#14633A";
+var SH='<ellipse cx="120" cy="151" rx="100" ry="7" fill="'+N+'" opacity=".12"/>';
+var HL='fill="#fff" opacity=".38"';
 var ART={
- castle:'<rect x="30" y="55" width="140" height="65" rx="12" fill="'+Y+'"/><rect x="18" y="35" width="36" height="85" rx="8" fill="'+B+'"/><rect x="146" y="35" width="36" height="85" rx="8" fill="'+B+'"/><path d="M80 120v-30a20 20 0 0 1 40 0v30z" fill="'+N+'"/>',
- castle2:'<rect x="25" y="50" width="150" height="70" rx="14" fill="'+P+'"/><circle cx="50" cy="45" r="24" fill="'+B+'"/><circle cx="150" cy="45" r="24" fill="'+B+'"/><circle cx="100" cy="70" r="16" fill="'+C+'"/>',
- tramp:'<ellipse cx="100" cy="85" rx="70" ry="18" fill="'+B+'"/><ellipse cx="100" cy="80" rx="58" ry="12" fill="'+N+'"/><path d="M45 88v28M155 88v28M100 98v22" stroke="'+N+'" stroke-width="6" stroke-linecap="round"/><circle cx="100" cy="40" r="12" fill="'+P+'"/>',
- balls:'<rect x="30" y="70" width="140" height="50" rx="22" fill="'+B+'"/><circle cx="60" cy="68" r="14" fill="'+P+'"/><circle cx="90" cy="62" r="14" fill="'+Y+'"/><circle cx="120" cy="66" r="14" fill="'+G+'"/><circle cx="148" cy="70" r="12" fill="'+P+'"/>',
- slide:'<path d="M40 120V50l30-20 90 80v10z" fill="'+Y+'"/><path d="M70 30l90 80" stroke="'+B+'" stroke-width="14" stroke-linecap="round"/><rect x="30" y="40" width="26" height="80" rx="8" fill="'+P+'"/>',
- soap:'<rect x="20" y="60" width="160" height="60" rx="16" fill="'+G+'"/><rect x="20" y="52" width="160" height="12" rx="6" fill="'+B+'"/><circle cx="60" cy="40" r="9" fill="'+C+'" stroke="'+B+'" stroke-width="3"/><circle cx="100" cy="30" r="12" fill="'+C+'" stroke="'+P+'" stroke-width="3"/><circle cx="140" cy="42" r="8" fill="'+C+'" stroke="'+B+'" stroke-width="3"/>'
+ castle:SH+'<rect x="20" y="120" width="200" height="30" rx="13" fill="'+BD+'"/><rect x="20" y="114" width="200" height="30" rx="13" fill="'+B+'"/><rect x="48" y="56" width="144" height="64" rx="10" fill="'+P+'"/><g fill="'+P+'"><circle cx="68" cy="57" r="11"/><circle cx="96" cy="53" r="11"/><circle cx="124" cy="53" r="11"/><circle cx="152" cy="53" r="11"/><circle cx="174" cy="57" r="10"/></g><g fill="'+PL+'"><rect x="80" y="64" width="8" height="52" rx="4"/><rect x="116" y="64" width="8" height="52" rx="4"/><rect x="152" y="64" width="8" height="52" rx="4"/></g><rect x="20" y="40" width="40" height="80" rx="16" fill="'+Y+'"/><rect x="180" y="40" width="40" height="80" rx="16" fill="'+Y+'"/><rect x="48" y="50" width="7" height="62" rx="3.5" fill="'+YD+'" opacity=".55"/><rect x="208" y="50" width="7" height="62" rx="3.5" fill="'+YD+'" opacity=".55"/><circle cx="40" cy="36" r="22" fill="'+B+'"/><circle cx="200" cy="36" r="22" fill="'+B+'"/><ellipse cx="32" cy="27" rx="8" ry="4.5" '+HL+'/><ellipse cx="192" cy="27" rx="8" ry="4.5" '+HL+'/><circle cx="40" cy="82" r="8" fill="'+C+'"/><circle cx="200" cy="82" r="8" fill="'+C+'"/><rect x="72" y="92" width="96" height="28" rx="10" fill="'+Y+'"/><path d="M100 144v-32a20 20 0 0 1 40 0v32z" fill="'+N+'"/><g class="hop"><circle cx="146" cy="24" r="8" fill="'+Y+'"/><ellipse cx="143" cy="21" rx="3" ry="2" '+HL+'/></g>',
+ castle2:SH+'<rect x="22" y="120" width="196" height="30" rx="13" fill="'+PD+'"/><rect x="22" y="114" width="196" height="30" rx="13" fill="'+P+'"/><rect x="40" y="62" width="160" height="58" rx="12" fill="'+B+'"/><circle cx="78" cy="64" r="24" fill="'+B+'"/><circle cx="162" cy="64" r="24" fill="'+B+'"/><circle cx="120" cy="56" r="30" fill="'+B+'"/><circle cx="78" cy="66" r="10" fill="'+C+'"/><circle cx="162" cy="66" r="10" fill="'+C+'"/><g class="hop"><circle cx="120" cy="56" r="15" fill="'+Y+'"/><ellipse cx="115" cy="51" rx="5" ry="3" '+HL+'/></g><rect x="22" y="74" width="26" height="46" rx="11" fill="'+Y+'"/><rect x="192" y="74" width="26" height="46" rx="11" fill="'+Y+'"/><path d="M102 144v-26a18 18 0 0 1 36 0v26z" fill="'+N+'"/><ellipse cx="70" cy="52" rx="8" ry="4" '+HL+'/>',
+ tramp:SH+'<path d="M58 100l-8 44M182 100l8 44M120 112v34" stroke="'+N+'" stroke-width="7" stroke-linecap="round"/><ellipse cx="120" cy="98" rx="86" ry="24" fill="'+BD+'"/><ellipse cx="120" cy="93" rx="86" ry="24" fill="'+B+'"/><ellipse cx="120" cy="91" rx="68" ry="15" fill="'+N+'"/><ellipse cx="96" cy="86" rx="22" ry="4" fill="#fff" opacity=".12"/><g class="hop"><circle cx="120" cy="44" r="15" fill="'+P+'"/><ellipse cx="114" cy="38" rx="5" ry="3" '+HL+'/></g><ellipse cx="120" cy="76" rx="12" ry="3" fill="'+N+'" opacity=".25"/>',
+ balls:SH+'<g class="hop"><circle cx="112" cy="40" r="12" fill="'+Y+'"/><ellipse cx="108" cy="36" rx="4" ry="2.5" '+HL+'/></g><circle cx="62" cy="86" r="15" fill="'+P+'"/><circle cx="92" cy="80" r="15" fill="'+Y+'"/><circle cx="122" cy="84" r="15" fill="'+BL+'"/><circle cx="150" cy="79" r="15" fill="'+P+'"/><circle cx="178" cy="86" r="15" fill="'+Y+'"/><circle cx="76" cy="94" r="14" fill="'+C+'"/><circle cx="136" cy="96" r="14" fill="'+Y+'"/><circle cx="164" cy="98" r="13" fill="'+C+'"/><rect x="30" y="98" width="180" height="50" rx="24" fill="'+BD+'"/><rect x="30" y="92" width="180" height="50" rx="24" fill="'+B+'"/><rect x="48" y="104" width="144" height="6" rx="3" fill="#fff" opacity=".22"/>',
+ slide:SH+'<path d="M84 56c56 6 62 74 126 76" stroke="'+BD+'" stroke-width="24" stroke-linecap="round" fill="none" transform="translate(0 5)"/><path d="M84 56c56 6 62 74 126 76" stroke="'+B+'" stroke-width="24" stroke-linecap="round" fill="none"/><path d="M90 52c50 8 58 68 118 72" stroke="'+BL+'" stroke-width="5" stroke-linecap="round" fill="none" opacity=".7"/><rect x="30" y="44" width="56" height="102" rx="16" fill="'+Y+'"/><g fill="'+YD+'"><rect x="42" y="64" width="32" height="6" rx="3"/><rect x="42" y="84" width="32" height="6" rx="3"/><rect x="42" y="104" width="32" height="6" rx="3"/><rect x="42" y="124" width="32" height="6" rx="3"/></g><rect x="24" y="34" width="68" height="16" rx="8" fill="'+P+'"/><g class="hop"><circle cx="70" cy="22" r="9" fill="'+P+'"/><ellipse cx="67" cy="19" rx="3" ry="2" '+HL+'/></g>',
+ soap:SH+'<rect x="18" y="78" width="204" height="70" rx="18" fill="'+GD+'"/><rect x="18" y="72" width="204" height="70" rx="18" fill="'+G+'"/><rect x="18" y="64" width="204" height="14" rx="7" fill="'+B+'"/><rect x="118" y="80" width="4" height="58" rx="2" fill="#fff" opacity=".45"/><circle cx="120" cy="109" r="16" stroke="#fff" stroke-opacity=".45" stroke-width="3" fill="none"/><rect x="24" y="94" width="10" height="30" rx="4" fill="'+C+'"/><rect x="206" y="94" width="10" height="30" rx="4" fill="'+C+'"/><g class="hop" fill="'+C+'" stroke="'+BL+'" stroke-width="2.5"><circle cx="70" cy="44" r="9"/><circle cx="120" cy="30" r="12"/><circle cx="170" cy="46" r="8"/></g>'
 };
-function art(k){return '<svg viewBox="0 0 200 140" aria-hidden="true">'+ART[k]+'</svg>'}
-var cats=["Todos"].concat(TOYS.map(t=>t.c).filter((v,i,a)=>a.indexOf(v)==i));
+function art(k){return '<svg viewBox="0 0 240 160" aria-hidden="true">'+ART[k]+'</svg>'}
+document.getElementById("heroToy").innerHTML=art("castle");
+
+var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+// Revelação ao rolar: Intersection Observer, sem listener de scroll
+var io=("IntersectionObserver" in window&&!reduce)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.add("in");io.unobserve(t);setTimeout(function(){t.removeAttribute("data-rv")},1600)}})},{rootMargin:"0px 0px -8% 0px",threshold:.12}):null;
+function watch(el){if(io)io.observe(el);else el.classList.add("in")}
+document.querySelectorAll("[data-rv]").forEach(watch);
+
+// Catálogo
+var cats=["Todos"].concat(TOYS.map(function(t){return t.c}).filter(function(v,i,a){return a.indexOf(v)==i}));
 var chips=document.getElementById("chips"),cat=document.getElementById("cat"),sel=document.getElementById("sel");
-function toast(m){var t=document.getElementById("toast");t.textContent=m;t.classList.add("on");clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove("on"),2800)}
-function render(f){cat.innerHTML=TOYS.filter(t=>f=="Todos"||t.c==f).map(t=>'<article class="card"><div class="ph">'+art(t.s)+'<small>ilustração demonstrativa</small></div><h3>'+t.n+'</h3><p>'+t.d+'</p><div class="cp"><span>Idade: [__]</span><span>Espaço: [__ m]</span><span>Crianças: [__]</span></div><p class="price">A partir de <b>[R$ __]</b></p><button class="btn bg" data-n="'+t.n+'">Pedir este brinquedo</button></article>').join("")}
-chips.innerHTML=cats.map((c,i)=>'<button class="chip" aria-pressed="'+(i==0)+'">'+c+'</button>').join("");
-chips.onclick=e=>{var b=e.target.closest(".chip");if(!b)return;chips.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",x==b));render(b.textContent)};
-sel.innerHTML=TOYS.map(t=>'<label><input type="checkbox" value="'+t.n+'">'+t.n+'</label>').join("");
+function toast(m){var t=document.getElementById("toast");t.textContent=m;t.classList.add("on");clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove("on")},2800)}
+function v(x,u){return x?'<dd>'+x+(u||"")+'</dd>':'<dd class="tbd">a definir</dd>'}
+var CK='<svg class="ck" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>';
+var first=true;
+function render(f){
+ cat.innerHTML=TOYS.filter(function(t){return f=="Todos"||t.c==f}).map(function(t,i){
+  return '<article class="card'+(first?'':' enter')+'" '+(first?'data-rv ':'')+'style="--i:'+i+'"><div class="ph t-'+t.t+'">'+art(t.s)+'<span class="ill">ilustração</span></div><div class="cb"><p class="ct">'+t.c+'</p><h3>'+t.n+'</h3><p class="ds">'+t.d+'</p><dl class="specs"><div><dt>Idade</dt>'+v(t.idade)+'</div><div><dt>Espaço</dt>'+v(t.espaco)+'</div><div><dt>Crianças</dt>'+v(t.criancas)+'</div></dl><p class="price"><span>A partir de</span>'+(t.preco?'<b>R$ '+t.preco+'</b>':'<b class="tbd">a definir</b>')+'</p><button class="btn bg" data-n="'+t.n+'">'+CK+'<span>Pedir este brinquedo</span></button></div></article>'}).join("");
+ if(first){cat.querySelectorAll("[data-rv]").forEach(watch);first=false}
+ sync();
+}
+function sync(){cat.querySelectorAll("button[data-n]").forEach(function(b){var c=sel.querySelector('input[value="'+b.dataset.n+'"]'),on=c&&c.checked;b.classList.toggle("on",on);b.lastChild.textContent=on?"No orçamento":"Pedir este brinquedo"})}
+chips.innerHTML=cats.map(function(c,i){return '<button class="chip" aria-pressed="'+(i==0)+'">'+c+'</button>'}).join("");
+chips.onclick=function(e){var b=e.target.closest(".chip");if(!b||b.getAttribute("aria-pressed")=="true")return;chips.querySelectorAll(".chip").forEach(function(x){x.setAttribute("aria-pressed",x==b)});render(b.textContent)};
+sel.innerHTML=TOYS.map(function(t){return '<label><input type="checkbox" value="'+t.n+'">'+t.n+'</label>'}).join("");
+sel.onchange=sync;
 render("Todos");
-cat.onclick=e=>{var b=e.target.closest("button[data-n]");if(!b)return;sel.querySelector('input[value="'+b.dataset.n+'"]').checked=true;toast(b.dataset.n+" adicionado ao orçamento");document.getElementById("orcamento").scrollIntoView()};
-// menu mobile
+cat.onclick=function(e){var b=e.target.closest("button[data-n]");if(!b)return;var c=sel.querySelector('input[value="'+b.dataset.n+'"]');c.checked=true;sync();var l=c.parentNode;l.classList.remove("pop");void l.offsetWidth;l.classList.add("pop");toast(b.dataset.n+" foi incluído no orçamento");document.getElementById("orcamento").scrollIntoView({behavior:reduce?"auto":"smooth"})};
+
+// Menu mobile
 var bur=document.querySelector(".burger"),menu=document.getElementById("menu");
-bur.onclick=()=>{var o=menu.classList.toggle("open");bur.setAttribute("aria-expanded",o)};
-menu.onclick=e=>{if(e.target.closest("a"))menu.classList.remove("open"),bur.setAttribute("aria-expanded",false)};
+function closeMenu(){menu.classList.remove("open");bur.setAttribute("aria-expanded",false);bur.setAttribute("aria-label","Abrir menu")}
+bur.onclick=function(){var o=menu.classList.toggle("open");bur.setAttribute("aria-expanded",o);bur.setAttribute("aria-label",o?"Fechar menu":"Abrir menu")};
+menu.onclick=function(e){if(e.target.closest("a"))closeMenu()};
+document.addEventListener("keydown",function(e){if(e.key=="Escape"&&menu.classList.contains("open")){closeMenu();bur.focus()}});
+
+// Cabeçalho, link ativo e pausa das peças fora da tela
+if("IntersectionObserver" in window){
+ var hdr=document.querySelector("header"),hero=document.querySelector(".hero");
+ new IntersectionObserver(function(es){hdr.classList.toggle("sc",!es[0].isIntersecting)},{rootMargin:"-80px 0px 0px 0px"}).observe(hero.querySelector(".tag"));
+ var links={};menu.querySelectorAll('a:not(.btn)').forEach(function(a){links[a.getAttribute("href").slice(1)]=a});
+ var nio=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(a)a.setAttribute("aria-current",e.isIntersecting?"true":"false")})},{rootMargin:"-45% 0px -50% 0px"});
+ Object.keys(links).forEach(function(id){var s=document.getElementById(id);if(s)nio.observe(s)});
+ var pio=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle("idle",!e.isIntersecting)})});
+ document.querySelectorAll("[data-pieces],.tray").forEach(function(el){pio.observe(el)});
+}
+
 // WhatsApp
 function wa(text){return "https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(text)}
-document.querySelectorAll(".wal").forEach(a=>{a.href=wa("Olá! Vim pelo site da Looping Brinquedos e gostaria de um orçamento.");a.target="_blank";a.rel="noopener"});
-if(!WHATSAPP_NUMBER)document.getElementById("wn").textContent="Preview: o número do WhatsApp comercial ainda não foi configurado. O WhatsApp vai pedir que você escolha o contato.";
-document.getElementById("f").onsubmit=function(e){
+document.querySelectorAll(".wal").forEach(function(a){a.href=wa("Olá! Vim pelo site da Looping Brinquedos e gostaria de um orçamento.");a.target="_blank";a.rel="noopener"});
+if(!WHATSAPP_NUMBER)document.getElementById("wn").textContent="Prévia: o número comercial ainda não foi configurado, então o WhatsApp vai pedir para você escolher o contato.";
+
+// Formulário
+var form=document.getElementById("f");
+var d0=new Date();form.data.min=new Date(d0.getTime()-d0.getTimezoneOffset()*60000).toISOString().slice(0,10);
+form.addEventListener("input",function(e){var i=e.target;if(i.hasAttribute("required")&&i.value.trim()){i.removeAttribute("aria-invalid");var m=i.parentNode.querySelector(".err");if(m)m.textContent=""}});
+form.onsubmit=function(e){
  e.preventDefault();var f=this,ok=true;
- f.querySelectorAll("[required]").forEach(i=>{var m=i.parentNode.querySelector(".err"),bad=!i.value.trim();m.textContent=bad?"Preencha este campo.":"";if(bad)ok=false});
- if(!ok){toast("Faltam alguns campos");f.querySelector(".err:not(:empty)").parentNode.querySelector("input").focus();return}
- var toys=[].map.call(sel.querySelectorAll("input:checked"),x=>x.value).join(", ")||"A definir";
+ f.querySelectorAll("[required]").forEach(function(i){var m=i.parentNode.querySelector(".err"),bad=!i.value.trim();m.textContent=bad?"Preencha este campo.":"";if(bad){ok=false;i.setAttribute("aria-invalid","true")}else i.removeAttribute("aria-invalid")});
+ if(!ok){toast("Faltam alguns campos");f.querySelector("[aria-invalid=true]").focus();return}
+ var toys=[].map.call(sel.querySelectorAll("input:checked"),function(x){return x.value}).join(", ")||"A definir";
  var d=f.data.value.split("-").reverse().join("/");
  var msg="Olá, Looping! Gostaria de um orçamento.\n\nNome: "+f.nome.value+"\nWhatsApp: "+f.zap.value+"\nData da festa: "+d+"\nLocal: "+f.local.value+"\nEvento: "+f.tipo.value+"\nBrinquedos: "+toys+"\nObservações: "+(f.obs.value||"-");
  window.open(wa(msg),"_blank","noopener");toast("Abrindo o WhatsApp com seu pedido");
