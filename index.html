@@ -340,7 +340,8 @@ footer a{text-decoration:none;opacity:.9}footer a:hover{text-decoration:underlin
 @media(max-width:800px){.fg{grid-template-columns:1fr 1fr}}@media(max-width:520px){.fg{grid-template-columns:1fr}}
 footer ul{list-style:none;padding:0;display:grid;gap:8px}
 footer h3{font-size:1rem;margin-bottom:12px;color:#F8A8C6}
-.copy{border-top:1px solid #2A3C66;margin-top:40px;padding-top:20px;font-size:.85rem;opacity:.8}
+.copy{border-top:1px solid #2A3C66;margin-top:40px;padding-top:20px;font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 24px}
+.copy p{opacity:.8}.copy .cred{opacity:.9}.copy strong{color:#F8A8C6;font-weight:700}
 
 /* ---------- Avisos e WhatsApp fixo ---------- */
 .toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140px);background:var(--navy);color:#fff;padding:14px 22px;border-radius:999px;z-index:40;transition:transform .4s var(--spring);max-width:min(92vw,440px);font-weight:700;text-align:center;box-shadow:0 12px 30px -10px rgba(0,0,0,.4)}
@@ -540,7 +541,7 @@ footer h3{font-size:1rem;margin-bottom:12px;color:#F8A8C6}
   <div><h3>Contato</h3><ul><li><a class="wal" href="#">WhatsApp: [número]</a></li><li><a href="https://www.instagram.com/loopingbrinquedos" target="_blank" rel="noopener">@loopingbrinquedos</a></li></ul></div>
   <div><h3>Regiões</h3><ul><li>Praia Grande/SP</li><li>Outras cidades a confirmar</li></ul></div>
  </div>
- <p class="copy">© 2026 Looping Brinquedos. Página de prévia com conteúdo demonstrativo.</p>
+ <div class="copy"><p>© 2026 Looping Brinquedos. Página de prévia com conteúdo demonstrativo.</p><p class="cred">Site desenvolvido por <strong>Sentiero AI</strong></p></div>
 </div></footer>
 
 <a class="wa wal" href="#" aria-label="Chamar no WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6c-.1.1-.3.3-.1.6.7 1.1 1.5 1.8 2.6 2.4.3.1.5.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.3.1.8-.1 1.4z"/></svg></a>
